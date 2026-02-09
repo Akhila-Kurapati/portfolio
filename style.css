@@ -475,7 +475,7 @@ footer {
   padding: 3px 0; /* slim strip */
   font-size: 14px;
 }
-/* General mobile adjustments */
+/* Mobile view adjustments */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -485,23 +485,21 @@ footer {
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     margin-top: 10px;
   }
 
   #home {
     height: auto;
-    padding-top: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 100px 15px 40px;
   }
 
   .main-name {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .tagline {
-    font-size: 16px;
+    font-size: 14px;
     max-width: 100%;
   }
 
@@ -515,7 +513,7 @@ footer {
 
   .about-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     text-align: center;
   }
 
@@ -543,8 +541,8 @@ footer {
   }
 
   .internship-card {
-    min-width: auto;
     max-width: 100%;
+    min-width: auto;
   }
 
   .contact-container {
