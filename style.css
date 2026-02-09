@@ -242,26 +242,7 @@ section {
   margin-bottom: 25px;
   color: #222;
 }
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-pic img {
-    width: 250px;
-    margin-bottom: 20px;
-  }
-
-  .about-text {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .about-text h2 {
-    font-size: 26px;
-  }
-}
 #projects {
   padding: 80px 30px;
   background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
@@ -327,21 +308,7 @@ section {
 .btn:hover {
   background-color: #0077b5;
 }
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .project-pic img {
-    width: 250px;
-    margin-bottom: 20px;
-  }
-
-  .project-text {
-    padding: 0 10px;
-  }
-}
 #internship {
   padding: 80px 30px;
   background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
@@ -399,16 +366,7 @@ section {
   line-height: 1.6;
   color: #555;
 }
-@media (max-width: 768px) {
-  .internships-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .internship-card {
-    max-width: 90%;
-  }
-}
 .internship-card p strong {
   color: #222;
 }
@@ -466,6 +424,15 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+}
+
 
 /* Footer Section */
 footer {
@@ -476,84 +443,99 @@ footer {
   font-size: 14px;
 }
 /* Mobile view adjustments */
+/* Mobile view adjustments */
 @media (max-width: 600px) {
+  /* Navbar */
+  
   nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   nav ul {
+    display: none; /* hidden by default */
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    width: 100%;
     margin-top: 10px;
   }
 
+  nav ul.active {
+    display: flex; /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+
+  
+
+  /* Home */
   #home {
     height: auto;
     padding: 100px 15px 40px;
   }
-
   .main-name {
     font-size: 32px;
   }
-
   .tagline {
     font-size: 14px;
     max-width: 100%;
   }
 
+  /* Tech stack */
   .tech-stack {
     gap: 20px;
   }
-
   .skill {
     font-size: 28px;
   }
 
+  /* About */
   .about-container {
     flex-direction: column;
     gap: 25px;
     text-align: center;
   }
-
   .about-pic img {
     width: 220px;
   }
 
+  /* Projects */
   .projects-container {
     gap: 40px;
   }
-
   .project-card {
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
-
   .project-pic img {
     width: 220px;
   }
 
+  /* Internships */
   .internships-container {
     flex-direction: column;
     gap: 20px;
   }
-
   .internship-card {
     max-width: 100%;
     min-width: auto;
   }
 
+  /* Contact */
   .contact-container {
     grid-template-columns: 1fr; /* single column */
     gap: 20px;
   }
-
   .contact-card {
     padding: 20px;
   }
 
+  /* Footer */
   footer {
     font-size: 12px;
     padding: 5px 0;
