@@ -445,6 +445,10 @@ footer {
 /* Mobile view adjustments */
 /* Mobile view adjustments */
 @media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
   /* Navbar */
   
   nav {
@@ -466,17 +470,26 @@ footer {
   }
 
   .menu-toggle {
-    display: block; /* show hamburger */
-  }
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+  margin-left: auto; /* pushes it to the right */
+}
+
 
 
   
 
   /* Home */
   #home {
-    height: auto;
-    padding: 100px 15px 40px;
+    height: auto;              /* allow content to expand naturally */
+    padding-top: 120px;        /* offset for fixed navbar */
+    padding-bottom: 40px;      /* extra breathing room */
   }
+
   .main-name {
     font-size: 32px;
   }
@@ -494,6 +507,13 @@ footer {
   }
 
   /* About */
+  /* About section */
+  #about {
+    height: auto;              /* remove fixed height */
+    padding-top: 60px;         /* spacing from previous section */
+    padding-bottom: 40px;
+  }
+
   .about-container {
     flex-direction: column;
     gap: 25px;
@@ -504,6 +524,11 @@ footer {
   }
 
   /* Projects */
+  #projects {
+    padding-top: 60px;         /* spacing from About */
+    padding-bottom: 60px;
+  }
+
   .projects-container {
     gap: 40px;
   }
@@ -534,6 +559,12 @@ footer {
   .contact-card {
     padding: 20px;
   }
+  section {
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
 
   /* Footer */
   footer {
