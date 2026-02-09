@@ -475,3 +475,89 @@ footer {
   padding: 3px 0; /* slim strip */
   font-size: 14px;
 }
+/* General mobile adjustments */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #home {
+    height: auto;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-name {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .tech-stack {
+    gap: 20px;
+  }
+
+  .skill {
+    font-size: 28px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-pic img {
+    width: 220px;
+  }
+
+  .projects-container {
+    gap: 40px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .project-pic img {
+    width: 220px;
+  }
+
+  .internships-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .internship-card {
+    min-width: auto;
+    max-width: 100%;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+}
